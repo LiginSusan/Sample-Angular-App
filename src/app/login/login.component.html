@@ -1,0 +1,33 @@
+<div class="main-bg">
+   
+    <div class="sub-main-w3">
+        <div class="bg-content-w3pvt">
+            <div class="top-content-style">
+                <img src="../../assets/images/user.jpg" alt="">
+            </div>
+            <form [formGroup]="userform" (ngSubmit)="login()">
+                <p class="legend">Login Here</p>
+                <div *ngIf="userform.errors" class="alert alert-danger">The username or Password is invalid</div>
+                <div class="input">
+                    <input type="email" placeholder="Email" formControlName="email" id="email">
+                    <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+                        <div *ngIf="email.errors.required">Email is required</div>
+                    </div>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password" formControlName="password" id="password">
+                    <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                    </div>
+                    <span class="glyphicon glyphicon-lock"></span>
+                </div>
+                <button type="submit" class="btn btn-info" (click)="login()">
+                    Login
+                </button>
+            </form>
+            <a href="#" class="bottom-text-w3ls"></a>
+        </div>
+    </div>
+    
+</div>
