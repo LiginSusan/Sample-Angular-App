@@ -20,10 +20,16 @@
                 <i class="glyphicon glyphicon-trash"></i>
               </td>
                 <td>
-                  <input [(ngModel)]="dynamicArray[i].jobCode" class="form-control" type="text" />
+                  <div class="input-group">
+                    <input [(ngModel)]="dynamicArray[i].jobCode" class="form-control" type="text" />
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i></span>
+                  </div>
                 </td>
                 <td>
-                  <input [(ngModel)]="dynamicArray[i].itemCode" class="form-control" type="text" />
+                  <div class="input-group">
+                    <input [(ngModel)]="dynamicArray[i].itemCode" class="form-control" type="text" />
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i></span>
+                  </div>
                 </td>
                 <td>
                   <input [(ngModel)]="dynamicArray[i].description" class="form-control" type="text"/>
@@ -38,7 +44,10 @@
                   <input [(ngModel)]="dynamicArray[i].charge" class="form-control" type="text"/>
                 </td>
                 <td>
-                  <input [(ngModel)]="dynamicArray[i].costcenter" class="form-control" type="text"/>
+                  <div class="input-group">
+                    <input [(ngModel)]="dynamicArray[i].costcenter" class="form-control" type="text" />
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i></span>
+                  </div>
                 </td>
                 <td>
                   <input [(ngModel)]="dynamicArray[i].rate" class="form-control" type="text"/>
