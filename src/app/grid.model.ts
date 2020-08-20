@@ -6,6 +6,5 @@ export class DynamicGrid{
     unit :string;
     charge :string;
     costcenter :string;
-    rate :string;
     amount : string;
 }

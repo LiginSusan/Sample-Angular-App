@@ -11,29 +11,27 @@ export class GridViewComponent implements OnInit {
   constructor() { }
   dynamicArray: Array<DynamicGrid> = [];
   index = 0;
-  newDynamic: any = {};
+  newDynamic: DynamicGrid;
+  selectedRowObject: DynamicGrid={jobCode: "", itemCode: "",description:"",notes: "", unit: "",charge:"",costcenter: "",amount:""};
   ngOnInit(): void {
      
   }
   addRow(index) {  
-      this.newDynamic = {title1: "", title2: "",title3:""};
+      this.newDynamic = {jobCode: "", itemCode: "",description:"",notes: "", unit: "",charge:"",costcenter: "",amount:""};
       this.dynamicArray.push(this.newDynamic);
       console.log(this.dynamicArray);
       return true;
   }
   
   deleteRow(index) {
-      // if(this.dynamicArray.length ==1) {
-      //     return false;
-      // } else {
-          this.dynamicArray.splice(index, 1);
-          return true;
-      //}
+    this.dynamicArray.splice(index, 1);
+    return true;
   }
 
-  openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+  openNav(gridRow) {
+    this.selectedRowObject = gridRow;
+    document.getElementById("mySidenav").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
   }
   
   closeNav() {
